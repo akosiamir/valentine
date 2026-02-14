@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container"></div>
+
+    <!-- Audio Control -->
+    <div class="top-controls">
+        <button id="restart-btn" class="control-btn hidden">Restart</button>
+        <button id="music-btn" class="control-btn">🔇 Music</button>
+    </div>
+    <audio id="bg-music" loop>
+        <source src="bg music/Adie - Paraluman (Official Audio).mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- LANDING PAGE -->
+    <div id="landing-page" class="screen active">
+        <div class="content">
+            <h1 class="main-title">Something special for you <span class="heart-icon">💕</span></h1>
+            <p class="subtitle">A little game, a few puzzles, and one question...</p>
+            <button id="start-btn" class="action-btn">Begin</button>
+        </div>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="game-page" class="screen">
+        <h2 id="level-title" class="level-title">Puzzle 1 of 3 💕</h2>
+        <p id="level-hint" class="level-hint"></p>
+
+        <div class="photos-grid" id="photos-grid">
+            <!-- Images injected by JS -->
+        </div>
+
+        <div class="answer-section">
+            <div class="answer-slots" id="answer-slots"></div>
+            
+            <div class="letters-pool" id="letters-pool"></div>
+
+            <div class="game-controls">
+                <button id="shuffle-btn" class="secondary-btn">Shuffle letters</button>
+                <button id="check-btn" class="action-btn">Check</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERSTITIAL SCREEN -->
+    <div id="interstitial-page" class="screen">
+        <div class="card">
+            <p id="interstitial-text" class="interstitial-text"></p>
+            <button id="continue-btn" class="action-btn">Continue &rarr;</button>
+        </div>
+    </div>
+
+    <!-- FINAL REVEAL SCREEN -->
+    <div id="final-page" class="screen">
+        <h1 class="main-title">After every puzzle, every memory, every smile...</h1>
+        <h2 class="sub-title">Will you be my Valentine? 💘</h2>
+        
+        <p class="message-text">Message me your response 💕</p>
+        
+        <div class="gif-container">
+            <img src="GIF IN LAST PART/In Love Hearts GIF by SpongeBob SquarePants.gif" alt="Cute GIF">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
